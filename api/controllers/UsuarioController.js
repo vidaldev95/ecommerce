@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const Usuario = mongoose.model("Usuario");
-const enviarEmailRecovery =  require("../helpers/email-recovery");
+//const enviarEmailRecovery =  require("../helpers/email-recovery");
 
 class UsuarioController{
     //Get
@@ -151,3 +151,5 @@ class UsuarioController{
         });
     }
 }
+
+module.exports = UsuarioController;

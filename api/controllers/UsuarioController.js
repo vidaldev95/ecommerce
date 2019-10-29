@@ -93,7 +93,7 @@ class UsuarioController{
                 errors: "Usuario não registrado"
             });
             if(!usuario.validarSenha(password)) return res.status(401).json({ errors: "Senha inválida "});
-            return res.json({ usuario: usuario.enviarAuthJSON });
+            return res.json({ usuario: usuario.enviarAuthJSON() });
         }).catch(next);
     }
 
